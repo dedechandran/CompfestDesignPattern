@@ -1,7 +1,5 @@
 package com.dedechandran.compfestdesignpattern.mock
 
-import com.dedechandran.compfestdesignpattern.factory.TransportType
-
 object DataGenerator {
     fun generateMotherboardData() = listOf(
         MotherBoard("Mobo Intel", 2000000)

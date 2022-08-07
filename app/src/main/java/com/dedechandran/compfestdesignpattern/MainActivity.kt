@@ -1,16 +1,11 @@
 package com.dedechandran.compfestdesignpattern
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import com.dedechandran.compfestdesignpattern.builder.Computer
-import com.dedechandran.compfestdesignpattern.builder.ComputerBuilder
 import com.dedechandran.compfestdesignpattern.databinding.ActivityMainBinding
 import com.dedechandran.compfestdesignpattern.mock.*
-import com.dedechandran.compfestdesignpattern.observer.ComputerPricePublisher
-import com.dedechandran.compfestdesignpattern.observer.ComputerPriceSubscriber
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -107,18 +102,30 @@ class MainActivity : AppCompatActivity() {
 
     private fun getOrderedComputerText(computer: Computer): String {
         return StringBuilder().apply {
-            append(computer.motherboard)
-            append("\n")
-            append(computer.cpu)
-            append("\n")
-            append(computer.vga)
-            append("\n")
-            append(computer.psu)
-            append("\n")
-            append(computer.ram)
-            append("\n")
-            append(computer.fan)
-            append("\n")
+            computer.motherboard?.let {
+                append(computer.motherboard)
+                append("\n")
+            }
+            computer.cpu?.let {
+                append(computer.cpu)
+                append("\n")
+            }
+            computer.vga?.let {
+                append(computer.vga)
+                append("\n")
+            }
+            computer.psu?.let {
+                append(computer.psu)
+                append("\n")
+            }
+            computer.ram?.let {
+                append(computer.ram)
+                append("\n")
+            }
+            computer.ram?.let {
+                append(computer.fan)
+                append("\n")
+            }
         }.toString()
     }
 }

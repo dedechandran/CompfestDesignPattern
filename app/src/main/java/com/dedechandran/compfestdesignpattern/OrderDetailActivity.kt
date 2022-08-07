@@ -5,10 +5,6 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import com.dedechandran.compfestdesignpattern.databinding.ActivityOrderDetailBinding
-import com.dedechandran.compfestdesignpattern.facade.DateManager
-import com.dedechandran.compfestdesignpattern.factory.Transport
-import com.dedechandran.compfestdesignpattern.factory.TransportFactory
-import com.dedechandran.compfestdesignpattern.factory.TransportType
 import com.dedechandran.compfestdesignpattern.mock.DataGenerator
 import com.google.android.material.R
 
